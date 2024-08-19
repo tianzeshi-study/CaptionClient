@@ -24,7 +24,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: 3.9
+        python-version: 3.11
         cache: 'pip'
 
     - name: Install dependencies
@@ -62,3 +62,6 @@ jobs:
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
         prerelease: ${{ contains(github.ref, '-') }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
+
