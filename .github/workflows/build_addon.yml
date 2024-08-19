@@ -4,7 +4,7 @@ on:
   push:
     tags: ["*"]
     # To build on main/master branch, uncomment the following line:
-    # branches: [ main , master ]
+    branches: [ main , master ]
 
   pull_request:
     branches: [ main, master ]
@@ -59,10 +59,10 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
         prerelease: ${{ contains(github.ref, '-') }}
-      # env:
-        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
 
