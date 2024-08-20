@@ -47,6 +47,9 @@ jobs:
 
   upload_release:
     runs-on: ubuntu-latest
+    environment: 
+      name: myenv
+
     if: ${{ startsWith(github.ref, 'refs/tags/') }}
     needs: ["build"]
     steps:
@@ -62,8 +65,8 @@ jobs:
       with:
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
-        # token:${{secrets.RELEASE_TOKEN}}
-        token:  helloworld
+        token:${{secrets.RELEASE_TOKEN}}
+        # token:  helloworld
         make_latest: true
         repository: tianzeshi-study/CaptionClient
         # token: ${{ secrets.ACCESS_TOKEN }}
