@@ -57,12 +57,16 @@ jobs:
       run: ls -R
 
     - name: Release
-      uses: softprops/action-gh-release@v1
+      uses: softprops/action-gh-release@v2
       with:
         # token: ${{ secrets.GITHUB_TOKEN }}
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
-        prerelease: ${{ contains(github.ref, '-') }}
+        make_latest: true
+        # prerelease: ${{ contains(github.ref, '-') }}
+        # token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
+        # body: "new release" 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
 
