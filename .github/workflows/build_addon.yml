@@ -66,10 +66,10 @@ jobs:
         repository: tianzeshi-study/CaptionClient
         token: ${{ secrets.ACCESS_TOKEN }}
         # token: ${{ secrets.RELEASE_TOKEN }}
-        # prerelease: ${{ contains(github.ref, '-') }}
+        prerelease: ${{ contains(github.ref, '-') }}
         # token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
         # token: ${{ secrets.GITHUB_TOKEN }}
-        # body: "new release" 
+        body: "new release" 
       env:
         # token: ${{ secrets.RELEASE_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
