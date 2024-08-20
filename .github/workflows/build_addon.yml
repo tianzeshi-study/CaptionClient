@@ -60,7 +60,7 @@ jobs:
       uses: softprops/action-gh-release@v2
       with:
         token: ${{ secrets.RELEASE_TOKEN }}
-        files: packaged_addon/*.nvda-addon
+        files: packaged_addon/CaptionClient.nvda-addon
         fail_on_unmatched_files: true
         make_latest: true
         repository: tianzeshi-study/CaptionClient
