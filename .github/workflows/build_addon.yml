@@ -59,12 +59,12 @@ jobs:
     - name: Release
       uses: softprops/action-gh-release@v2
       with:
-        # token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.RELEASE_TOKEN }}
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
         make_latest: true
         repository: tianzeshi-study/CaptionClient
-        token: ${{ secrets.ACCESS_TOKEN }}
+        # token: ${{ secrets.ACCESS_TOKEN }}
         # token: ${{ secrets.RELEASE_TOKEN }}
         prerelease: ${{ contains(github.ref, '-') }}
         # token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
