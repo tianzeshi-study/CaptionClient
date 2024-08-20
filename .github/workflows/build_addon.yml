@@ -63,7 +63,8 @@ jobs:
         files: packaged_addon/*.nvda-addon
         fail_on_unmatched_files: true
         make_latest: true
-        token: ${{ secrets.RELEASE_TOKEN }}
+        token: ${{ secrets.ACCESS_TOKEN }}
+        # token: ${{ secrets.RELEASE_TOKEN }}
         # prerelease: ${{ contains(github.ref, '-') }}
         # token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
         # token: ${{ secrets.GITHUB_TOKEN }}
