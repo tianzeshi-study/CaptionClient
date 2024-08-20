@@ -65,7 +65,8 @@ jobs:
         make_latest: true
         # prerelease: ${{ contains(github.ref, '-') }}
         # token: ${{ secrets.CUSTOM_GITHUB_TOKEN }}
-        token: ${{ secrets.GITHUB_TOKEN }}
+        # token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.RELEASE_TOKEN }}
         # body: "new release" 
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
