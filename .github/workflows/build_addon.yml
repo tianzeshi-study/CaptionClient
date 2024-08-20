@@ -72,6 +72,7 @@ jobs:
         body: "new release" 
       env:
         # token: ${{ secrets.RELEASE_TOKEN }}
+        token: ${{ secrets.ACCESS_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
         # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 使用 GitHub 提供的默认 Token
 
