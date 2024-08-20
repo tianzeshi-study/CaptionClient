@@ -275,7 +275,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         # Translators: Category of addon in input gestures.
         # category= _("Image Query"),
         category= _("Caption Client"),
-        gesture="kb:NVDA+windows+,"
+        gesture="kb:NVDA+windows+."
     )
     def script_runCaption(self, gesture):
         image_data= saveImage()
